@@ -4,7 +4,121 @@
     font-family: 'Roboto', sans-serif;
 }
 
+
+// variables
 $font-logo-title: 'Shrikhand', cursive;
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
+
+$size-header-location: 1.1rem;
+$size-h2: 1.8rem;
+$size-nav: 1.15rem;
+
+
+// header
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-logo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding: 35px 0 15px 0;
+    box-shadow: 0 1px 8px 3px rgb(185, 184, 184);
+    & img {
+        width: 50%;
+    }
+}
+
+.header-location {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    align-items: center;
+    font-weight: bold;
+    padding: 5px;
+    font-size: $size-header-location;
+    color: rgba(50,50,50,255);
+    background-color: rgba(234,234,234,255);
+
+}
+
+// nav
+nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 35px;
+    background-color: rgba(246,246,246,255);
+    text-align: center;
+    padding: 35px 35px 100px 35px;
+    h2 {
+        font-size: $size-h2;
+    }
+    p {
+        font-size: $size-nav-functioning;
+        color: rgba(50,50,50,255);
+    }
+    a {
+        font-size: $size-nav-functioning;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 20px;
+        border-radius: 30px;
+        background-image: linear-gradient(0deg, $primary, $secondary);
+    }
+}
+
+// functioning
+.section-functioning {
+    padding: 35px;
+    h2 {
+        font-size: $size-h2;
+    }
+}
+
+.functioning-wrap {
+    display: flex;
+    flex-direction: column;
+    &__line {
+        position: relative;
+        display: flex;
+        column-gap: 25px;
+        background-color: rgba(246,246,246,255);
+        border-radius: 20px;
+        padding: 15px 10px 10px 35px ;
+        box-shadow: 0px 8px 13px -4px rgb(185, 184, 184);
+        margin-bottom: 15px;
+        &-number {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: -15px;
+            top: 28px;
+            background-color: $primary;
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            p {
+                margin: 0;
+                color: white;
+            }
+        }
+        &-icon {
+            width: 15px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(80,80,80,255);
+        }
+        &-text {
+            font-weight: bold;
+        }
+    }
+}
