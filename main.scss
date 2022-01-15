@@ -12,8 +12,8 @@ $secondary: #FF79DA;
 $tertiary: #99E2D0;
 
 $size-header-location: 1.1rem;
-$size-h2: 1.8rem;
-$size-nav: 1.15rem;
+$size-h2: 1.7rem;
+$size-nav: 1.1rem;
 
 
 // header
@@ -59,11 +59,11 @@ nav {
         font-size: $size-h2;
     }
     p {
-        font-size: $size-nav-functioning;
+        font-size: $size-nav;
         color: rgba(50,50,50,255);
     }
     a {
-        font-size: $size-nav-functioning;
+        font-size: $size-nav;
         text-decoration: none;
         color: white;
         font-weight: bold;
@@ -75,7 +75,7 @@ nav {
 
 // functioning
 .section-functioning {
-    padding: 35px;
+    padding: 35px 20px;
     h2 {
         font-size: $size-h2;
     }
@@ -85,6 +85,7 @@ nav {
     display: flex;
     flex-direction: column;
     &__line {
+        margin-left: 15px;
         position: relative;
         display: flex;
         column-gap: 25px;

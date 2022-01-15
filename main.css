@@ -67,16 +67,16 @@ nav {
 }
 
 nav h2 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 nav p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #323232;
 }
 
 nav a {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -87,11 +87,11 @@ nav a {
 }
 
 .section-functioning {
-  padding: 35px;
+  padding: 35px 20px;
 }
 
 .section-functioning h2 {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 .functioning-wrap {
@@ -105,6 +105,7 @@ nav a {
 }
 
 .functioning-wrap__line {
+  margin-left: 15px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,7 +115,6 @@ nav a {
   background-color: #f6f6f6;
   border-radius: 20px;
   padding: 15px 10px 10px 35px;
-  font-size: 1.15rem;
   -webkit-box-shadow: 0px 8px 13px -4px #b9b8b8;
           box-shadow: 0px 8px 13px -4px #b9b8b8;
   margin-bottom: 15px;
