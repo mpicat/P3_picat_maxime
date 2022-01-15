@@ -55,15 +55,14 @@ nav {
     background-color: rgba(246,246,246,255);
     text-align: center;
     padding: 35px 35px 100px 35px;
+    font-size: $size-nav;
     h2 {
         font-size: $size-h2;
     }
     p {
-        font-size: $size-nav;
         color: rgba(50,50,50,255);
     }
     a {
-        font-size: $size-nav;
         text-decoration: none;
         color: white;
         font-weight: bold;
@@ -85,15 +84,15 @@ nav {
     display: flex;
     flex-direction: column;
     &__line {
-        margin-left: 15px;
+        margin: 0 0 25px 15px;
         position: relative;
         display: flex;
         column-gap: 25px;
         background-color: rgba(246,246,246,255);
         border-radius: 20px;
-        padding: 15px 10px 10px 35px ;
-        box-shadow: 0px 8px 13px -4px rgb(185, 184, 184);
-        margin-bottom: 15px;
+        padding: 15px 15px 15px 35px ;
+        box-shadow: 0px 8px 13px -4px rgb(214, 213, 213);
+        
         &-number {
             position: absolute;
             display: flex;
@@ -110,6 +109,7 @@ nav {
                 color: white;
             }
         }
+
         &-icon {
             width: 15px;
             position: relative;
@@ -118,8 +118,18 @@ nav {
             align-items: center;
             color: rgba(80,80,80,255);
         }
+
         &-text {
             font-weight: bold;
         }
     }
 }
+
+.style-violet {
+    background-color: rgba(147, 86, 220, 0.1);
+    i {
+        color: $primary;
+    }
+}
+
+// restaurants

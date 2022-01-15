@@ -64,6 +64,7 @@ nav {
   background-color: #f6f6f6;
   text-align: center;
   padding: 35px 35px 100px 35px;
+  font-size: 1.1rem;
 }
 
 nav h2 {
@@ -71,12 +72,10 @@ nav h2 {
 }
 
 nav p {
-  font-size: 1.1rem;
   color: #323232;
 }
 
 nav a {
-  font-size: 1.1rem;
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -105,7 +104,7 @@ nav a {
 }
 
 .functioning-wrap__line {
-  margin-left: 15px;
+  margin: 0 0 25px 15px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,10 +113,9 @@ nav a {
           column-gap: 25px;
   background-color: #f6f6f6;
   border-radius: 20px;
-  padding: 15px 10px 10px 35px;
-  -webkit-box-shadow: 0px 8px 13px -4px #b9b8b8;
-          box-shadow: 0px 8px 13px -4px #b9b8b8;
-  margin-bottom: 15px;
+  padding: 15px 15px 15px 35px;
+  -webkit-box-shadow: 0px 8px 13px -4px #d6d5d5;
+          box-shadow: 0px 8px 13px -4px #d6d5d5;
 }
 
 .functioning-wrap__line-number {
@@ -161,5 +159,13 @@ nav a {
 
 .functioning-wrap__line-text {
   font-weight: bold;
+}
+
+.style-violet {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+
+.style-violet i {
+  color: #9356DC;
 }
 /*# sourceMappingURL=main.css.map */
