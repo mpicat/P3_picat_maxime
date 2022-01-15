@@ -168,4 +168,139 @@ nav a {
 .style-violet i {
   color: #9356DC;
 }
+
+.main-restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 35px 20px;
+  background-color: #f6f6f6;
+}
+
+.main-restaurant h2 {
+  font-size: 1.7rem;
+}
+
+.main-restaurant a {
+  text-decoration: none;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  -webkit-box-shadow: 0px 8px 13px -4px #d6d5d5;
+          box-shadow: 0px 8px 13px -4px #d6d5d5;
+  color: black;
+}
+
+.card-wrapper img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  height: 70%;
+}
+
+.card-wrapper__new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99E2D0;
+  color: #0fb68c;
+  font-weight: bold;
+  padding: 8px;
+  font-size: 0.8rem;
+}
+
+.card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+  height: 30%;
+}
+
+.card-content__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 5px;
+}
+
+.card-content__text h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card-content__text p {
+  margin: 0;
+}
+
+.card-content__heart {
+  position: relative;
+}
+
+.card-content__heart i {
+  font-size: 1.1rem;
+  margin: 0;
+  padding-top: 5px;
+  color: #9356DC;
+}
+
+.card-content__heart-full {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.card-content__heart:active > .card-content__heart-full {
+  opacity: 1;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px;
+  background: #353535;
+  color: white;
+}
+
+.footer-title p {
+  font-family: "Shrikhand", cursive;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: white;
+}
 /*# sourceMappingURL=main.css.map */
