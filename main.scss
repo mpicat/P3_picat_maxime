@@ -4,7 +4,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
 // variables
 $font-logo-title: 'Shrikhand', cursive;
 $primary: #9356DC;
@@ -75,6 +74,28 @@ nav {
         padding: 20px;
         border-radius: 30px;
         background-image: linear-gradient(0deg, $primary, $secondary);
+        box-shadow: 0 1px 8px 3px rgb(185, 184, 184);
+        position: relative;
+        z-index: 1;
+        &:active {
+            &::after {
+                opacity: .2;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            border-radius: 30px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            box-shadow: 0 1px 8px 3px rgb(90, 90, 90);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 250ms;
+        }
     }
 }
 
@@ -146,7 +167,8 @@ nav {
 .main-restaurant {
     display: flex;
     flex-direction: column;
-    padding: 35px 20px;
+    row-gap: 25px;
+    padding: 35px 20px 75px 20px;
     background-color: $bg-color;
 
     h2 {
@@ -236,18 +258,120 @@ nav {
 footer {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 25px;
     background: rgba(53,53,53,255);
     color: white;
 }
 
 .footer-title p {
-      font-family: $font-logo-title;  
+      font-family: $font-logo-title;
+      margin: 0;
 }
 
 .footer-links {
+    i {
+        width: 25px;
+    }
     a {
         text-decoration: none;
         color: white;
     }
+}
+
+// loader-spinner
+
+.main-wrapper {
+    position: relative;
+}
+
+.main-loader {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 55px;
+    z-index: 4;
+    background-color: white;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: loader 3000ms ease-in-out;
+
+    &__cube {
+        width: 100px;
+        height: 100px;
+        background-color: $primary;
+        position: relative;
+        z-index: 1;
+        animation: cube-turn 3000ms ease-in-out;
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $secondary;
+            animation: cube-color 3000ms ease-in-out;
+        }
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 50%;
+        }
+    }
+}
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes cube-turn {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+
+}
+
+@keyframes cube-color {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+
 }

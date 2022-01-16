@@ -83,6 +83,31 @@ nav a {
   border-radius: 30px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-box-shadow: 0 1px 8px 3px #b9b8b8;
+          box-shadow: 0 1px 8px 3px #b9b8b8;
+  position: relative;
+  z-index: 1;
+}
+
+nav a:active::after {
+  opacity: .2;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  border-radius: 30px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 8px 3px #5a5a5a;
+          box-shadow: 0 1px 8px 3px #5a5a5a;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 }
 
 .section-functioning {
@@ -177,7 +202,8 @@ nav a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 35px 20px;
+  row-gap: 25px;
+  padding: 35px 20px 75px 20px;
   background-color: #f6f6f6;
 }
 
@@ -290,17 +316,186 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 10px;
+  padding: 25px;
   background: #353535;
   color: white;
 }
 
 .footer-title p {
   font-family: "Shrikhand", cursive;
+  margin: 0;
+}
+
+.footer-links i {
+  width: 25px;
 }
 
 .footer-links a {
   text-decoration: none;
   color: white;
+}
+
+.main-wrapper {
+  position: relative;
+}
+
+.main-loader {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 55px;
+  z-index: 4;
+  background-color: white;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: loader 3000ms ease-in-out;
+          animation: loader 3000ms ease-in-out;
+}
+
+.main-loader__cube {
+  width: 100px;
+  height: 100px;
+  background-color: #9356DC;
+  position: relative;
+  z-index: 1;
+  -webkit-animation: cube-turn 3000ms ease-in-out;
+          animation: cube-turn 3000ms ease-in-out;
+}
+
+.main-loader__cube::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FF79DA;
+  -webkit-animation: cube-color 3000ms ease-in-out;
+          animation: cube-color 3000ms ease-in-out;
+}
+
+.main-loader__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-loader__text img {
+  width: 50%;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cube-turn {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+}
+
+@keyframes cube-turn {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(720deg);
+            transform: rotate(720deg);
+  }
+}
+
+@-webkit-keyframes cube-color {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cube-color {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
