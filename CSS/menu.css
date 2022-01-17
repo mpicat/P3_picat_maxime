@@ -1,3 +1,25 @@
+@-webkit-keyframes check-move {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes check-move {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 @-webkit-keyframes entrance-move {
   0% {
     -webkit-transform: translateY(12px);
@@ -361,28 +383,6 @@ header {
 .card-meal:active > .card-meal__bar > .card-meal__bar__check {
   -webkit-animation: check-move 400ms ease-in-out;
           animation: check-move 400ms ease-in-out;
-}
-
-@-webkit-keyframes check-move {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes check-move {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 
 .entrance {
