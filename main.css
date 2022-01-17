@@ -22,6 +22,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 1;
   padding: 35px 0 15px 0;
   -webkit-box-shadow: 0 1px 8px 3px #b9b8b8;
           box-shadow: 0 1px 8px 3px #b9b8b8;
@@ -38,11 +39,8 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-gap: 8px;
-          column-gap: 8px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
   font-weight: bold;
   padding: 5px;
   font-size: 1.1rem;
@@ -58,26 +56,29 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 35px;
+  row-gap: 60px;
   background-color: #f6f6f6;
   text-align: center;
-  padding: 35px 35px 100px 35px;
+  padding: 35px 35px 85px 35px;
   font-size: 1.1rem;
 }
 
 nav h2 {
+  margin: 0;
+  padding-bottom: 15px;
   font-size: 1.7rem;
 }
 
 nav p {
-  color: #323232;
+  margin: 0;
+  color: #6e6e6e;
+  font-size: 1.1rem;
 }
 
 nav a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
-  padding: 20px;
+  padding: 20px 25px;
   border-radius: 30px;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
@@ -109,7 +110,7 @@ nav a::after {
 }
 
 .section-functioning {
-  padding: 35px 20px;
+  padding: 25px 20px 45px 20px;
 }
 
 .section-functioning h2 {
@@ -193,21 +194,17 @@ nav a::after {
 
 .functioning-wrap__line-icon {
   width: 15px;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #505050;
+  color: #6e6e6e;
 }
 
 .functioning-wrap__line-text {
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .main-restaurant {
@@ -219,11 +216,12 @@ nav a::after {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 25px;
-  padding: 35px 20px 75px 20px;
+  padding: 55px 20px 75px 20px;
   background-color: #f6f6f6;
 }
 
 .main-restaurant h2 {
+  margin: 0;
   font-size: 1.7rem;
 }
 
@@ -261,9 +259,9 @@ nav a::after {
   top: 15px;
   right: 15px;
   background-color: #99E2D0;
-  color: #0fb68c;
-  font-weight: bold;
-  padding: 8px;
+  color: #0b8b6b;
+  font-weight: 500;
+  padding: 8px 12px;
   font-size: 0.8rem;
 }
 
@@ -289,7 +287,7 @@ nav a::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  row-gap: 5px;
+  row-gap: 8px;
 }
 
 .card-content__text h4 {
@@ -306,7 +304,7 @@ nav a::after {
 }
 
 .card-content__heart i {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin: 0;
   padding-top: 5px;
   color: #9356DC;
@@ -316,8 +314,8 @@ nav a::after {
   position: absolute;
   top: 0;
   opacity: 0;
-  -webkit-transition: opacity 600ms ease-in-out;
-  transition: opacity 600ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .card-content__heart:active > .card-content__heart-full {
@@ -335,19 +333,25 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  row-gap: 10px;
-  padding: 25px;
+  row-gap: 25px;
+  padding: 35px 25px 25px 25px;
   background: #353535;
   color: white;
 }
 
 .footer-title p {
   font-family: "Shrikhand", cursive;
+  font-size: 1.2rem;
   margin: 0;
 }
 
 .footer-links i {
-  width: 25px;
+  width: 30px;
+}
+
+.footer-links p {
+  margin: 0;
+  padding-bottom: 12px;
 }
 
 .footer-links a {
@@ -373,7 +377,6 @@ footer {
           align-items: center;
   row-gap: 55px;
   background-color: white;
-  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;

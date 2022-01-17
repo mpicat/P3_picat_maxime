@@ -13,6 +13,7 @@ $bg-color: rgba(246,246,246,255);
 
 $size-h2: 1.7rem;
 $size-inter: 1.1rem;
+$size-omf: 1.2rem;
 $size-heart: 1.3rem;
 $size-new: 0.8rem;
 
@@ -26,9 +27,9 @@ header {
 .header-logo {
     display: flex;
     justify-content: center;
+    z-index: 1;
     padding: 35px 0 15px 0;
     box-shadow: 0 1px 8px 3px rgb(185, 184, 184);
-
     & img {
         width: 50%;
     }
@@ -37,8 +38,7 @@ header {
 .header-location {
     display: flex;
     justify-content: center;
-    column-gap: 8px;
-    align-items: center;
+    column-gap: 20px;
     font-weight: bold;
     padding: 5px;
     font-size: $size-inter;
@@ -50,25 +50,25 @@ header {
 nav {
     display: flex;
     flex-direction: column;
-    row-gap: 35px;
+    row-gap: 60px;
     background-color: $bg-color;
     text-align: center;
-    padding: 35px 35px 100px 35px;
+    padding: 35px 35px 85px 35px;
     font-size: $size-inter;
-
     h2 {
+        margin: 0;
+        padding-bottom: 15px;
         font-size: $size-h2;
     }
-
     p {
-        color: rgba(50,50,50,255);
+        margin: 0;
+        color: rgba(110,110,110,255);
+        font-size: $size-inter;
     }
-
     a {
         text-decoration: none;
         color: white;
-        font-weight: bold;
-        padding: 20px;
+        padding: 20px 25px;
         border-radius: 30px;
         background-image: linear-gradient(0deg, $primary, $secondary);
         box-shadow: 0 1px 8px 3px rgb(185, 184, 184);
@@ -98,8 +98,7 @@ nav {
 
 // functioning
 .section-functioning {
-    padding: 35px 20px;
-
+    padding: 25px 20px 45px 20px;
     h2 {
         font-size: $size-h2;
     }
@@ -108,7 +107,6 @@ nav {
 .functioning-wrap {
     display: flex;
     flex-direction: column;
-
     &__line {
         margin: 0 0 25px 15px;
         position: relative;
@@ -119,13 +117,11 @@ nav {
         border-radius: 20px;
         padding: 15px 15px 15px 35px ;
         box-shadow: 0px 8px 13px -4px rgb(214, 213, 213);
-
         &:active {
             &::after {
                 opacity: 1;
             }
         }
-
         &::after {
             content: "";
             position: absolute;
@@ -140,13 +136,11 @@ nav {
             z-index: -1;
             transition: opacity 250ms;
         }
-
         &:active {
             & > .functioning-wrap__line-icon {
                 color: $primary;
             }
         }
-        
         &-number {
             position: absolute;
             display: flex;
@@ -158,24 +152,19 @@ nav {
             border-radius: 50%;
             height: 30px;
             width: 30px;
-
             p {
                 margin: 0;
                 color: white;
             }
         }
-
         &-icon {
             width: 15px;
-            position: relative;
             display: flex;
             justify-content: center;
-            align-items: center;
-            color: rgba(80,80,80,255);
+            color: rgba(110,110,110,255);
         }
-
         &-text {
-            font-weight: bold;
+            font-weight: 500;
         }
     }
 }
@@ -185,13 +174,12 @@ nav {
     display: flex;
     flex-direction: column;
     row-gap: 25px;
-    padding: 35px 20px 75px 20px;
+    padding: 55px 20px 75px 20px;
     background-color: $bg-color;
-
     h2 {
+        margin: 0;
         font-size: $size-h2;
     }
-
     a {
         text-decoration: none;
     }
@@ -207,21 +195,19 @@ nav {
     background-color: white;
     box-shadow: 0px 8px 13px -4px rgb(214, 213, 213);
     color: black;
-
     img {
         object-fit: cover;
         border-radius: 15px 15px 0 0;
         height: 70%;
     }
-
     &__new {
         position: absolute;
         top: 15px;
         right: 15px;
         background-color: $tertiary;
-        color: rgb(15, 182, 140);
-        font-weight: bold;
-        padding: 8px;
+        color: rgb(11, 139, 107);
+        font-weight: 500;
+        padding: 8px 12px;
         font-size: $size-new;
     }
 }
@@ -231,40 +217,33 @@ nav {
     justify-content: space-between;
     padding: 15px;
     height: 30%;
-
     &__text {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        row-gap: 5px;
-
+        row-gap: 8px;
         h4 {
             margin: 0;
             font-size: $size-inter;
         }
-
         p {
             margin: 0;
         }
     }
-
     &__heart {
         position: relative;
-
         i {
-            font-size: $size-inter;
+            font-size: $size-heart;
             margin: 0;
             padding-top: 5px;
             color: $primary;
         }
-
         &-full {
             position: absolute;
             top: 0;
             opacity: 0;
-            transition: opacity 600ms ease-in-out;
+            transition: opacity 500ms ease-in-out;
         }
-
         &:active > .card-content__heart-full {
             opacity: 1;
         }
@@ -276,20 +255,25 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 10px;
-    padding: 25px;
+    row-gap: 25px;
+    padding: 35px 25px 25px 25px;
     background: rgba(53,53,53,255);
     color: white;
 }
 
 .footer-title p {
       font-family: $font-logo-title;
+      font-size: $size-omf;
       margin: 0;
 }
 
 .footer-links {
     i {
-        width: 25px;
+        width: 30px;
+    }
+    p {
+        margin: 0;
+        padding-bottom: 12px;
     }
     a {
         text-decoration: none;
@@ -298,7 +282,6 @@ footer {
 }
 
 // loader-spinner
-
 .main-loader {
     position: fixed;
     z-index: 1;
@@ -308,14 +291,12 @@ footer {
     align-items: center;
     row-gap: 55px;
     background-color: white;
-    opacity: 0;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     visibility: hidden;
     animation: loader 500ms ease-in-out;
-
     &__cube {
         width: 100px;
         height: 100px;
@@ -335,7 +316,6 @@ footer {
             animation: cube-color 500ms ease-in-out;
         }
     }
-
     &__text {
         display: flex;
         justify-content: center;
@@ -375,7 +355,6 @@ footer {
     100% {
         transform: rotate(720deg);
     }
-
 }
 
 @keyframes cube-color {
@@ -394,5 +373,4 @@ footer {
     100% {
         opacity: 0;
     }
-
 }
