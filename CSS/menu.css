@@ -1,3 +1,121 @@
+@-webkit-keyframes entrance-move {
+  0% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  33% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes entrance-move {
+  0% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  33% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes dish-move {
+  0% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  33% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  66% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dish-move {
+  0% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  33% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  66% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes dessert-move {
+  0% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  66% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes dessert-move {
+  0% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  66% {
+    -webkit-transform: translateY(12px);
+            transform: translateY(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -38,12 +156,13 @@ header {
 }
 
 .restaurant-bg {
-  background-image: url(/img/palette.webp);
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 105%;
   height: 250px;
+}
+
+.restaurant-bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 .main-menu {
@@ -56,7 +175,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 25px;
-  top: -50px;
+  top: -40px;
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
   padding: 35px 15px 0px 15px;
@@ -104,6 +223,24 @@ header {
   padding-right: 10px;
 }
 
+.main-title__heart {
+  position: relative;
+  cursor: pointer;
+}
+
+.main-title__heart-full {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  color: #9356DC;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+}
+
+.main-title__heart:active > .main-title__heart-full {
+  opacity: 1;
+}
+
 .card-meal {
   position: relative;
   display: -webkit-box;
@@ -139,7 +276,6 @@ header {
 
 .card-meal__description h3 {
   margin: 0;
-  font-size: 1.1rem;
   font-weight: 500;
   overflow: hidden;
   white-space: nowrap;
@@ -148,7 +284,7 @@ header {
 
 .card-meal__description p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 300;
   overflow: hidden;
   white-space: nowrap;
@@ -241,6 +377,27 @@ header {
   100% {
     rotate: 360deg;
   }
+}
+
+.entrance {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation: entrance-move 2000ms ease-in-out;
+          animation: entrance-move 2000ms ease-in-out;
+}
+
+.dish {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation: dish-move 2000ms ease-in-out;
+          animation: dish-move 2000ms ease-in-out;
+}
+
+.dessert {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation: dessert-move 2000ms ease-in-out;
+          animation: dessert-move 2000ms ease-in-out;
 }
 
 .main-order {

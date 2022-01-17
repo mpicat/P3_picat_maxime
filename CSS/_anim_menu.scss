@@ -1,0 +1,48 @@
+@keyframes entrance-move {
+    0% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    33% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dish-move {
+    0% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    33% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    66% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes dessert-move {
+    0% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    66% {
+        transform: translateY(12px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
