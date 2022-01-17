@@ -5,6 +5,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: #f6f6f6;
+}
+
 header {
   position: relative;
 }
@@ -44,10 +48,35 @@ header {
 
 .main-menu {
   position: relative;
-  top: -60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 25px;
+  top: -50px;
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
-  padding: 25px;
+  padding: 35px 15px 0px 15px;
+}
+
+.main-menu h2 {
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 400;
+  padding: 0 0 10px 10px;
+}
+
+.main-menu h2::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  height: 2px;
+  width: 40px;
+  border-bottom: 4px solid #99E2D0;
 }
 
 .main-title {
@@ -63,9 +92,11 @@ header {
 }
 
 .main-title h1 {
+  margin: 0;
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
   font-weight: 500;
+  padding-left: 10px;
 }
 
 .main-title i {
@@ -73,7 +104,7 @@ header {
   padding-right: 10px;
 }
 
-.card-move {
+.card-meal {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,16 +112,16 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 30%;
-  height: 90px;
+  height: 80px;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 5px 3px grey;
-          box-shadow: 0 0 5px 3px grey;
+  -webkit-box-shadow: 0 2px 20px -4px #c2c2c2;
+          box-shadow: 0 2px 20px -4px #c2c2c2;
   border-radius: 15px;
+  margin-top: 15px;
   cursor: pointer;
 }
 
-.card-move__description {
+.card-meal__description {
   padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,29 +132,31 @@ header {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 83%;
+  width: 80%;
   -webkit-transition: 400ms ease-in-out;
   transition: 400ms ease-in-out;
 }
 
-.card-move__description h2 {
+.card-meal__description h3 {
   margin: 0;
-  font-size: 1.2rem;
-  color: blue;
+  font-size: 1.1rem;
+  font-weight: 500;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.card-move__description p {
+.card-meal__description p {
   margin: 0;
+  font-size: 0.9rem;
+  font-weight: 300;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
-.card-move__page {
-  width: 17%;
+.card-meal__price {
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,8 +167,8 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 15px 0 3px 15px;
-  font-weight: bold;
+  padding: 15px 0 1px 15px;
+  font-weight: 500;
   -webkit-transform: translateX(0);
           transform: translateX(0);
   -webkit-transition: -webkit-transform 400ms;
@@ -144,7 +177,7 @@ header {
   transition: transform 400ms, -webkit-transform 400ms;
 }
 
-.card-move__bar {
+.card-meal__bar {
   position: absolute;
   top: 0;
   right: 0;
@@ -159,7 +192,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 20%;
-  background-color: red;
+  background-color: #99E2D0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: -webkit-transform 400ms;
@@ -168,30 +201,31 @@ header {
   transition: transform 400ms, -webkit-transform 400ms;
 }
 
-.card-move__bar__spider {
-  font-size: 2rem;
+.card-meal__bar__check {
+  font-size: 1.6rem;
+  color: white;
 }
 
-.card-move:hover > .card-move__description {
-  width: 65%;
+.card-meal:active > .card-meal__description {
+  width: 60%;
 }
 
-.card-move:hover > .card-move__page {
+.card-meal:active > .card-meal__price {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
-.card-move:hover .card-move__bar {
+.card-meal:active .card-meal__bar {
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
 
-.card-move:hover > .card-move__bar > .card-move__bar__spider {
-  -webkit-animation: spider-move 400ms ease-in-out;
-          animation: spider-move 400ms ease-in-out;
+.card-meal:active > .card-meal__bar > .card-meal__bar__check {
+  -webkit-animation: check-move 400ms ease-in-out;
+          animation: check-move 400ms ease-in-out;
 }
 
-@-webkit-keyframes spider-move {
+@-webkit-keyframes check-move {
   0% {
     rotate: 0deg;
   }
@@ -200,12 +234,56 @@ header {
   }
 }
 
-@keyframes spider-move {
+@keyframes check-move {
   0% {
     rotate: 0deg;
   }
   100% {
     rotate: 360deg;
   }
+}
+
+.main-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 0;
+}
+
+.main-order a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 55px;
+  border-radius: 30px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-box-shadow: 0 1px 8px 3px #b9b8b8;
+          box-shadow: 0 1px 8px 3px #b9b8b8;
+  position: relative;
+  z-index: 1;
+}
+
+.main-order a:active::after {
+  opacity: .2;
+}
+
+.main-order a::after {
+  content: "";
+  position: absolute;
+  border-radius: 30px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  -webkit-box-shadow: 0 1px 8px 3px #5a5a5a;
+          box-shadow: 0 1px 8px 3px #5a5a5a;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 }
 /*# sourceMappingURL=menu.css.map */

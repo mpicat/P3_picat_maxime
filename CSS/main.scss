@@ -11,11 +11,13 @@ $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $bg-color: rgba(246,246,246,255);
 
-$size-h2: 1.7rem;
-$size-inter: 1.1rem;
-$size-omf: 1.2rem;
-$size-heart: 1.3rem;
-$size-new: 0.8rem;
+$size-very-high: 1.7rem;
+$size-high: 1.6rem;
+$size-medium: 1.3rem;
+$size-low: 1.2rem;
+$size-very-low: 1.1rem;
+$size-x-low: 0.9rem;
+$size-x-x-low: 0.8rem;
 
 
 // header
@@ -41,7 +43,7 @@ header {
     column-gap: 20px;
     font-weight: bold;
     padding: 5px;
-    font-size: $size-inter;
+    font-size: $size-very-low;
     color: rgba(50,50,50,255);
     background-color: rgba(234,234,234,255);
 }
@@ -54,16 +56,16 @@ nav {
     background-color: $bg-color;
     text-align: center;
     padding: 35px 35px 85px 35px;
-    font-size: $size-inter;
+    font-size: $size-very-low;
     h2 {
         margin: 0;
         padding-bottom: 15px;
-        font-size: $size-h2;
+        font-size: $size-very-high;
     }
     p {
         margin: 0;
         color: rgba(110,110,110,255);
-        font-size: $size-inter;
+        font-size: $size-very-low;
     }
     a {
         text-decoration: none;
@@ -100,7 +102,7 @@ nav {
 .section-functioning {
     padding: 25px 20px 45px 20px;
     h2 {
-        font-size: $size-h2;
+        font-size: $size-very-high;
     }
 }
 
@@ -178,7 +180,7 @@ nav {
     background-color: $bg-color;
     h2 {
         margin: 0;
-        font-size: $size-h2;
+        font-size: $size-very-high;
     }
     a {
         text-decoration: none;
@@ -208,7 +210,7 @@ nav {
         color: rgb(11, 139, 107);
         font-weight: 500;
         padding: 8px 12px;
-        font-size: $size-new;
+        font-size: $size-x-x-low;
     }
 }
 
@@ -224,7 +226,7 @@ nav {
         row-gap: 8px;
         h4 {
             margin: 0;
-            font-size: $size-inter;
+            font-size: $size-very-low;
         }
         p {
             margin: 0;
@@ -233,7 +235,7 @@ nav {
     &__heart {
         position: relative;
         i {
-            font-size: $size-heart;
+            font-size: $size-medium;
             margin: 0;
             padding-top: 5px;
             color: $primary;
@@ -263,7 +265,7 @@ footer {
 
 .footer-title p {
       font-family: $font-logo-title;
-      font-size: $size-omf;
+      font-size: $size-low;
       margin: 0;
 }
 
