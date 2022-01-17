@@ -1,3 +1,14 @@
+// Animation check qui roule
+@keyframes check-move {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Animation Entrées, Plats, Desserts
 @keyframes entrance-move {
     0% {
         transform: translateY(12px);
