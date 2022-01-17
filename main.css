@@ -87,7 +87,7 @@ nav a {
   z-index: 1;
 }
 
-nav a:hover::after {
+nav a:active::after {
   opacity: .2;
 }
 
@@ -298,8 +298,8 @@ nav a::after {
   position: absolute;
   top: 0;
   opacity: 0;
-  -webkit-transition: opacity 300ms ease-in-out;
-  transition: opacity 300ms ease-in-out;
+  -webkit-transition: opacity 600ms ease-in-out;
+  transition: opacity 600ms ease-in-out;
 }
 
 .card-content__heart:active > .card-content__heart-full {
@@ -338,7 +338,7 @@ footer {
 }
 
 .main-loader {
-  position: absolute;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,8 +360,9 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-animation: loader 1000ms ease-in-out;
-          animation: loader 1000ms ease-in-out;
+  visibility: hidden;
+  -webkit-animation: loader 500ms ease-in-out;
+          animation: loader 500ms ease-in-out;
 }
 
 .main-loader__cube {
@@ -370,8 +371,8 @@ footer {
   background-color: #9356DC;
   position: relative;
   z-index: 1;
-  -webkit-animation: cube-turn 1000ms ease-in-out;
-          animation: cube-turn 1000ms ease-in-out;
+  -webkit-animation: cube-turn 500ms ease-in-out;
+          animation: cube-turn 500ms ease-in-out;
 }
 
 .main-loader__cube::after {
@@ -383,8 +384,8 @@ footer {
   bottom: 0;
   left: 0;
   background-color: #FF79DA;
-  -webkit-animation: cube-color 1000ms ease-in-out;
-          animation: cube-color 1000ms ease-in-out;
+  -webkit-animation: cube-color 500ms ease-in-out;
+          animation: cube-color 500ms ease-in-out;
 }
 
 .main-loader__text {
@@ -406,24 +407,38 @@ footer {
 @-webkit-keyframes loader {
   0% {
     opacity: 1;
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    visibility: visible;
   }
   90% {
     opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
 @keyframes loader {
   0% {
     opacity: 1;
+    visibility: visible;
+  }
+  50% {
+    opacity: 1;
+    visibility: visible;
   }
   90% {
     opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
