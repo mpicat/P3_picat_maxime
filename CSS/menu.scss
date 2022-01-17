@@ -138,6 +138,9 @@ header {
         transition: 400ms ease-in-out; 
         h3 {
             margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
             font-size: $size-low;
             font-weight: 500;
         }
