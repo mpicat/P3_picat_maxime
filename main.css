@@ -129,6 +129,7 @@ nav a::after {
 .functioning-wrap__line {
   margin: 0 0 25px 15px;
   position: relative;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,6 +140,31 @@ nav a::after {
   padding: 15px 15px 15px 35px;
   -webkit-box-shadow: 0px 8px 13px -4px #d6d5d5;
           box-shadow: 0px 8px 13px -4px #d6d5d5;
+}
+
+.functioning-wrap__line:active::after {
+  opacity: 1;
+}
+
+.functioning-wrap__line::after {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(147, 86, 220, 0.1);
+  -webkit-box-shadow: 0px 8px 13px -4px #d6d5d5;
+          box-shadow: 0px 8px 13px -4px #d6d5d5;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+
+.functioning-wrap__line:active > .functioning-wrap__line-icon {
+  color: #9356DC;
 }
 
 .functioning-wrap__line-number {
@@ -182,14 +208,6 @@ nav a::after {
 
 .functioning-wrap__line-text {
   font-weight: bold;
-}
-
-.style-violet {
-  background-color: rgba(147, 86, 220, 0.1);
-}
-
-.style-violet i {
-  color: #9356DC;
 }
 
 .main-restaurant {
@@ -339,6 +357,7 @@ footer {
 
 .main-loader {
   position: fixed;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,7 +372,6 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   row-gap: 55px;
-  z-index: 1;
   background-color: white;
   opacity: 0;
   top: 0;
