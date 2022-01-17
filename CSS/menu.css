@@ -6,6 +6,92 @@
 }
 
 header {
+  position: relative;
+}
+
+.header-logo {
+  position: relative;
+  z-index: -1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding-top: 25px;
+}
+
+.header-logo img {
+  width: 45%;
+}
+
+.header-arrow {
+  position: absolute;
+  top: 27px;
+  left: 25px;
+}
+
+.header-arrow i {
+  color: #353535;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.restaurant-bg {
+  background-image: url(/img/palette.webp);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 105%;
+  height: 250px;
+}
+
+.main-menu {
+  position: relative;
+  top: -60px;
+  border-radius: 40px 40px 0 0;
+  background-color: #f6f6f6;
+  padding: 25px;
+}
+
+.main-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-title h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.main-title i {
+  font-size: 1.6rem;
+  padding-right: 10px;
+}
+
+.card-move {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+  height: 90px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 5px 3px grey;
+          box-shadow: 0 0 5px 3px grey;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.card-move__description {
+  padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,22 +99,113 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 83%;
+  -webkit-transition: 400ms ease-in-out;
+  transition: 400ms ease-in-out;
 }
 
-.header-logo {
+.card-move__description h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: blue;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-move__description p {
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card-move__page {
+  width: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 15px 0 3px 15px;
+  font-weight: bold;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+}
+
+.card-move__bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 1;
-  padding: 35px 0 15px 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  background-color: red;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
 }
 
-.header-logo img {
-  width: 50%;
+.card-move__bar__spider {
+  font-size: 2rem;
+}
+
+.card-move:hover > .card-move__description {
+  width: 65%;
+}
+
+.card-move:hover > .card-move__page {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.card-move:hover .card-move__bar {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.card-move:hover > .card-move__bar > .card-move__bar__spider {
+  -webkit-animation: spider-move 400ms ease-in-out;
+          animation: spider-move 400ms ease-in-out;
+}
+
+@-webkit-keyframes spider-move {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+@keyframes spider-move {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
 }
 /*# sourceMappingURL=menu.css.map */

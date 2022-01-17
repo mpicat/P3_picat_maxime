@@ -11,8 +11,10 @@ $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $bg-color: rgba(246,246,246,255);
 
+$size-h1: 1.7rem;
 $size-h2: 1.7rem;
 $size-inter: 1.1rem;
+$size-high: 1.6rem;
 $size-omf: 1.2rem;
 $size-heart: 1.3rem;
 $size-new: 0.8rem;
@@ -20,17 +22,148 @@ $size-new: 0.8rem;
 
 // header
 header {
-    display: flex;
-    flex-direction: column;
+    position: relative;
 }
 
 .header-logo {
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-    padding: 35px 0 15px 0;
+    position: relative;
+    z-index: -1;
     box-shadow: none;
-    & img {
-        width: 50%;
+    padding-top: 25px;
+    img {
+        width: 45%;
+    }
+}
+
+.header-arrow {
+    position: absolute;
+    top: 27px;
+    left: 25px;
+    i {
+        color: rgba(53,53,53,255);
+        font-size: $size-heart;
+        font-weight: bold;
+    }
+}
+
+// restaurant bg
+.restaurant-bg {
+    background-image: url(/img/palette.webp);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 105%;
+    height: 250px;
+}
+
+// main
+.main-menu {
+    position: relative;
+    top: -60px;
+    border-radius: 40px 40px 0 0;
+    background-color: $bg-color;
+    padding: 25px;
+}
+
+.main-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        font-family: $font-logo-title;
+        font-size: $size-h1;
+        font-weight: 500;
+    }
+    i {
+        font-size: $size-high;
+        padding-right: 10px;
+    }
+}
+
+// entrance
+.card-move {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    height: 90px;
+    overflow: hidden;
+    box-shadow: 0 0 5px 3px grey;
+    border-radius: 15px;
+    cursor: pointer;
+
+    &__description {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 83%;
+        transition: 400ms ease-in-out; 
+        h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: blue;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        p {
+            margin: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__page {
+        width: 17%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 15px 0 3px 15px;
+        font-weight: bold;
+        transform: translateX(0);
+        transition: transform 400ms;
+    }
+
+    &__bar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        background-color: red;
+        transform: translateX(100%);
+        transition: transform 400ms;
+        
+        &__spider {
+            font-size: 2rem;
+            }
+        }
+    
+    &:hover > .card-move__description {
+        width: 65%;
+    }
+    &:hover > .card-move__page {
+        transform: translateX(-100%);
+    }
+    &:hover .card-move__bar {
+        transform: translateX(0%);
+        }
+    &:hover > .card-move__bar > .card-move__bar__spider {
+        animation: spider-move 400ms ease-in-out;
+    }
+}
+
+
+@keyframes spider-move {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
     }
 }
