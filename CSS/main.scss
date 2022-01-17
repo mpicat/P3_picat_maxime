@@ -40,12 +40,14 @@ header {
 .header-location {
     display: flex;
     justify-content: center;
-    column-gap: 20px;
     font-weight: bold;
     padding: 5px;
     font-size: $size-very-low;
     color: rgba(50,50,50,255);
     background-color: rgba(234,234,234,255);
+    i {
+        padding-right: 20px;
+    }
 }
 
 // nav
