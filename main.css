@@ -16,8 +16,6 @@ header {
 }
 
 .header-logo {
-  position: relative;
-  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,7 +87,7 @@ nav a {
   z-index: 1;
 }
 
-nav a:active::after {
+nav a:hover::after {
   opacity: .2;
 }
 
@@ -339,10 +337,6 @@ footer {
   color: white;
 }
 
-.main-wrapper {
-  position: relative;
-}
-
 .main-loader {
   position: absolute;
   display: -webkit-box;
@@ -359,15 +353,15 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   row-gap: 55px;
-  z-index: 4;
+  z-index: 1;
   background-color: white;
   opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-animation: loader 3000ms ease-in-out;
-          animation: loader 3000ms ease-in-out;
+  -webkit-animation: loader 1000ms ease-in-out;
+          animation: loader 1000ms ease-in-out;
 }
 
 .main-loader__cube {
@@ -376,8 +370,8 @@ footer {
   background-color: #9356DC;
   position: relative;
   z-index: 1;
-  -webkit-animation: cube-turn 3000ms ease-in-out;
-          animation: cube-turn 3000ms ease-in-out;
+  -webkit-animation: cube-turn 1000ms ease-in-out;
+          animation: cube-turn 1000ms ease-in-out;
 }
 
 .main-loader__cube::after {
@@ -389,8 +383,8 @@ footer {
   bottom: 0;
   left: 0;
   background-color: #FF79DA;
-  -webkit-animation: cube-color 3000ms ease-in-out;
-          animation: cube-color 3000ms ease-in-out;
+  -webkit-animation: cube-color 1000ms ease-in-out;
+          animation: cube-color 1000ms ease-in-out;
 }
 
 .main-loader__text {
