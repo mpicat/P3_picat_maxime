@@ -430,7 +430,7 @@ header {
 }
 
 .main-order a:active::after {
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .main-order a::after {
