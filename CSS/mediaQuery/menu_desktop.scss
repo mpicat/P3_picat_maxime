@@ -94,3 +94,9 @@ header {
         animation: check-move 400ms ease-in-out;
     }
 }
+
+.main-order a:hover {
+    &::after {
+        opacity: .2;
+    }
+}
