@@ -19,7 +19,7 @@ nav {
   padding: 15px 35px;
 }
 
-.functioning_wrap {
+.functioning-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,12 +31,20 @@ nav {
           column-gap: 15px;
 }
 
-.functioning_wrap__line {
+.functioning-wrap__line {
   width: 33%;
 }
 
 .main-restaurant {
-  padding: 35px;
+  padding: 45px 35px;
+}
+
+.main-restaurant h2 {
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.devices-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,15 +54,10 @@ nav {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 15px 2%;
+  gap: 20px 2%;
 }
 
-.main-restaurant h2 {
-  width: 100%;
-  padding-bottom: 15px;
-}
-
-.main-restaurant a {
+.devices-wrap a {
   width: 49%;
 }
 

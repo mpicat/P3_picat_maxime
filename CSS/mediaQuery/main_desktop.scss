@@ -1,8 +1,69 @@
 // version desktop
 
+// variables
+$primary: #9356DC;
+
+// header
 header {
     width: 40%;
     margin: 35px auto;
 }
 
 // functioning
+.section-functioning {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    h2 {
+        text-align: center;
+    }
+}
+
+.functioning-wrap {
+    column-gap: 2%;
+    justify-content: center;
+    &__line {
+        width: 25%;
+    }
+}
+
+// restaurants
+.main-restaurant {
+    h2 {
+        text-align: center;
+    }
+}
+
+.devices-wrap {
+    column-gap: 2%;
+    a {
+        width: 23.5%;
+    }
+}
+
+// footer
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 5%;
+}
+
+// hover
+nav a:hover {
+    &::after {
+        opacity: .2;
+    }
+}
+
+.functioning-wrap__line:hover {
+    > .functioning-wrap__line-icon {
+        color: $primary;
+    }
+    &::after {
+        opacity: 1;
+    }
+}
+
+.card-content__heart:hover > .card-content__heart-full {
+    opacity: 1;
+}

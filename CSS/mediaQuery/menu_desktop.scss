@@ -1,0 +1,106 @@
+// version desktop
+
+// variables
+$primary: #9356DC;
+$size-x-high: 2.5rem;
+$size-very-high: 1.7rem;
+$size-high: 1.6rem;
+$size-medium: 1.3rem;
+$size-low: 1.2rem;
+$size-very-low: 1.1rem;
+$size-x-low: 0.9rem;
+$size-x-x-low: 0.8rem;
+
+// header
+header {
+    width: 70%;
+    margin: 35px auto 0;
+    padding-top: 25px;
+}
+
+.header-arrow {
+    top: 65px;
+    left: 70px;
+    i {
+        font-size: $size-high;
+    }
+}
+
+// restaurant bg
+.restaurant-bg {
+    width: 70%;
+    margin: 0 auto;
+}
+
+// main
+.main-menu {
+    width: 70%;
+    margin: 0 auto;
+    padding: 3% 7%;
+    row-gap: 40px;
+}
+
+// font-size
+.main-title {
+    h1, i {
+        font-size: $size-x-high;
+    }
+}
+
+.main-menu h2 {
+        font-size: $size-high;
+}
+
+.card-meal {
+    &__description {
+        padding: 20px;
+        h3 {
+            font-size: $size-medium;
+        }
+        p {
+            font-size: $size-low;
+        }
+    }
+    &__price {
+        font-size: $size-low;
+    }
+}
+
+.main-order {
+    a {
+        font-size: $size-medium;
+    }
+}
+
+.footer-title p {
+    font-size: $size-x-high;
+}
+
+.footer-links {
+    p {
+        font-size: $size-medium;
+    }
+}
+
+// hover
+.main-title__heart:hover > .main-title__heart-full {
+    opacity: 1;
+}
+
+.card-meal:hover {
+    > .card-meal__description {
+        width: 60%;
+    }
+
+    > .card-meal__price {
+        transform: translateX(-100%);
+    }
+
+    .card-meal__bar {
+        transform: translateX(0%);
+        }
+
+    > .card-meal__bar > .card-meal__bar__check {
+        animation: check-move 400ms ease-in-out;
+    }
+}

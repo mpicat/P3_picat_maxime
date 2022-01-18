@@ -2,4 +2,69 @@ header {
   width: 40%;
   margin: 35px auto;
 }
+
+.section-functioning {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.section-functioning h2 {
+  text-align: center;
+}
+
+.functioning-wrap {
+  -webkit-column-gap: 2%;
+          column-gap: 2%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.functioning-wrap__line {
+  width: 25%;
+}
+
+.main-restaurant h2 {
+  text-align: center;
+}
+
+.devices-wrap {
+  -webkit-column-gap: 2%;
+          column-gap: 2%;
+}
+
+.devices-wrap a {
+  width: 23.5%;
+}
+
+.footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+}
+
+nav a:hover::after {
+  opacity: .2;
+}
+
+.functioning-wrap__line:hover > .functioning-wrap__line-icon {
+  color: #9356DC;
+}
+
+.functioning-wrap__line:hover::after {
+  opacity: 1;
+}
+
+.card-content__heart:hover > .card-content__heart-full {
+  opacity: 1;
+}
 /*# sourceMappingURL=main_desktop.css.map */
