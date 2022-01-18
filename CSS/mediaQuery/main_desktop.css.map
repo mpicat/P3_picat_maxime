@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACH,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,SAAS;CACpB",
     "sources": [
         "main_desktop.scss"
     ],

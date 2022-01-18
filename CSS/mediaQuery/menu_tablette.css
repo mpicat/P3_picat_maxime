@@ -1,0 +1,33 @@
+header {
+  margin: 35px 35px 0 35px;
+  border-radius: 15px 15px 0 0;
+  -webkit-box-shadow: 0 1px 8px 3px #b9b8b8;
+          box-shadow: 0 1px 8px 3px #b9b8b8;
+}
+
+.header-arrow {
+  top: 40px;
+  left: 50px;
+}
+
+.restaurant-bg {
+  margin: 0 35px;
+}
+
+.main-menu {
+  margin: 0 35px;
+  -webkit-box-shadow: 0 1px 8px 3px #b9b8b8;
+          box-shadow: 0 1px 8px 3px #b9b8b8;
+  padding: 40px 60px;
+  top: 0;
+}
+
+.card-meal {
+  padding: 5px 0;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+}
+/*# sourceMappingURL=menu_tablette.css.map */

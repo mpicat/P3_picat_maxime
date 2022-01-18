@@ -182,17 +182,22 @@ header {
             }
         }
     
-    &:active > .card-meal__description {
-        width: 60%;
-    }
-    &:active > .card-meal__price {
-        transform: translateX(-100%);
-    }
-    &:active .card-meal__bar {
-        transform: translateX(0%);
+    &:active {
+        > .card-meal__description {
+            width: 60%;
         }
-    &:active > .card-meal__bar > .card-meal__bar__check {
-        animation: check-move 400ms ease-in-out;
+
+        > .card-meal__price {
+            transform: translateX(-100%);
+        }
+
+        .card-meal__bar {
+            transform: translateX(0%);
+            }
+
+        > .card-meal__bar > .card-meal__bar__check {
+            animation: check-move 400ms ease-in-out;
+        }
     }
 }
 

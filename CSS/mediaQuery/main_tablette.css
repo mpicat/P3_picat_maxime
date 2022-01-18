@@ -32,8 +32,7 @@ nav {
 }
 
 .functioning_wrap__line {
-  width: 25%;
-  margin: 0;
+  width: 33%;
 }
 
 .main-restaurant {
@@ -80,4 +79,4 @@ nav {
       -ms-flex-align: center;
           align-items: center;
 }
-/*# sourceMappingURL=tablette.css.map */
+/*# sourceMappingURL=main_tablette.css.map */
