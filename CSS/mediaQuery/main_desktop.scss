@@ -1,7 +1,16 @@
 // version desktop
 
 // variables
+// variables
 $primary: #9356DC;
+$size-x-high: 2.5rem;
+$size-very-high: 1.7rem;
+$size-high: 1.6rem;
+$size-medium: 1.3rem;
+$size-low: 1.2rem;
+$size-very-low: 1.1rem;
+$size-x-low: 0.9rem;
+$size-x-x-low: 0.8rem;
 
 // header
 header {
@@ -48,6 +57,36 @@ header {
     column-gap: 5%;
 }
 
+// font-size
+form {
+    i, input {
+        font-size: $size-medium;
+    }
+}
+
+nav {
+    h2 {
+        font-size: $size-very-high;
+    }
+    p, a {
+        font-size: $size-medium;
+    }
+}
+
+.functioning-wrap__line {
+    &-number, &-icon, &-text {
+        font-size: $size-low;
+    }
+}
+.footer-title p {
+    font-size: $size-x-high;
+}
+
+.footer-links {
+    p {
+        font-size: $size-medium;
+    }
+}
 // hover
 nav a:hover {
     &::after {

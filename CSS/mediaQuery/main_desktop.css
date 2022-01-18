@@ -52,6 +52,30 @@ header {
           column-gap: 5%;
 }
 
+form i, form input {
+  font-size: 1.3rem;
+}
+
+nav h2 {
+  font-size: 1.7rem;
+}
+
+nav p, nav a {
+  font-size: 1.3rem;
+}
+
+.functioning-wrap__line-number, .functioning-wrap__line-icon, .functioning-wrap__line-text {
+  font-size: 1.2rem;
+}
+
+.footer-title p {
+  font-size: 2.5rem;
+}
+
+.footer-links p {
+  font-size: 1.3rem;
+}
+
 nav a:hover::after {
   opacity: .2;
 }
