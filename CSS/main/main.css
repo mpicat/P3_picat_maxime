@@ -32,22 +32,43 @@ header {
   width: 50%;
 }
 
-.header-location {
+form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-weight: 500;
-  padding: 5px;
-  font-size: 1.1rem;
-  color: #323232;
   background-color: #eaeaea;
 }
 
-.header-location i {
+form h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #323232;
+}
+
+form i {
   padding-right: 20px;
+}
+
+form input {
+  width: 70%;
+  border: none;
+  background: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #323232;
 }
 
 nav {
@@ -348,7 +369,7 @@ footer {
 }
 
 .footer-links i {
-  width: 30px;
+  width: 25px;
 }
 
 .footer-links p {
@@ -359,6 +380,10 @@ footer {
 .footer-links a {
   text-decoration: none;
   color: white;
+}
+
+.fa-hands-helping {
+  font-size: 0.9rem;
 }
 
 .main-loader {
@@ -384,8 +409,6 @@ footer {
   width: 100%;
   height: 100%;
   visibility: hidden;
-  -webkit-animation: loader 500ms ease-in-out;
-          animation: loader 500ms ease-in-out;
 }
 
 .main-loader__cube {
@@ -394,8 +417,6 @@ footer {
   background-color: #9356DC;
   position: relative;
   z-index: 1;
-  -webkit-animation: cube-turn 500ms ease-in-out;
-          animation: cube-turn 500ms ease-in-out;
 }
 
 .main-loader__cube::after {
@@ -407,8 +428,6 @@ footer {
   bottom: 0;
   left: 0;
   background-color: #FF79DA;
-  -webkit-animation: cube-color 500ms ease-in-out;
-          animation: cube-color 500ms ease-in-out;
 }
 
 .main-loader__text {

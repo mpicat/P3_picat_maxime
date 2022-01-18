@@ -1,0 +1,83 @@
+header {
+  margin: 35px;
+}
+
+.header-logo {
+  border-radius: 15px 15px 0 0;
+}
+
+form {
+  border-radius: 0 0 15px 15px;
+}
+
+nav {
+  margin: 35px 35px 0 35px;
+  border-radius: 15px;
+}
+
+.section-functioning {
+  padding: 15px 35px;
+}
+
+.functioning_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.functioning_wrap__line {
+  width: 25%;
+  margin: 0;
+}
+
+.main-restaurant {
+  padding: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px 2%;
+}
+
+.main-restaurant h2 {
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.main-restaurant a {
+  width: 49%;
+}
+
+.footer-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main_tablette.css.map */
