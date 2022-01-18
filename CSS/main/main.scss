@@ -321,14 +321,14 @@ footer {
     width: 100%;
     height: 100%;
     visibility: hidden;
-    // animation: loader 3000ms ease-in-out;
+    animation: loader 3000ms ease-in-out;
     &__cube {
         width: 100px;
         height: 100px;
         background-color: $primary;
         position: relative;
         z-index: 1;
-        // animation: cube-turn 3000ms ease-in-out;
+        animation: cube-turn 3000ms ease-in-out;
         &::after {
             content: "";
             position: absolute;
@@ -338,7 +338,7 @@ footer {
             bottom: 0;
             left: 0;
             background-color: $secondary;
-            // animation: cube-color 3000ms ease-in-out;
+            animation: cube-color 3000ms ease-in-out;
         }
     }
     &__text {

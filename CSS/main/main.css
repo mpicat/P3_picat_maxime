@@ -420,6 +420,8 @@ footer {
   width: 100%;
   height: 100%;
   visibility: hidden;
+  -webkit-animation: loader 3000ms ease-in-out;
+          animation: loader 3000ms ease-in-out;
 }
 
 .main-loader__cube {
@@ -428,6 +430,8 @@ footer {
   background-color: #9356DC;
   position: relative;
   z-index: 1;
+  -webkit-animation: cube-turn 3000ms ease-in-out;
+          animation: cube-turn 3000ms ease-in-out;
 }
 
 .main-loader__cube::after {
@@ -439,6 +443,8 @@ footer {
   bottom: 0;
   left: 0;
   background-color: #FF79DA;
+  -webkit-animation: cube-color 3000ms ease-in-out;
+          animation: cube-color 3000ms ease-in-out;
 }
 
 .main-loader__text {
