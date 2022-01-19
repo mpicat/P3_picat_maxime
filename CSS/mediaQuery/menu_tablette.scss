@@ -1,5 +1,15 @@
 // format utilisé iPad
 
+// variables
+$primary: #9356DC;
+$size-x-high: 2.5rem;
+$size-very-high: 1.7rem;
+$size-high: 1.6rem;
+$size-medium: 1.3rem;
+$size-low: 1.2rem;
+$size-very-low: 1.1rem;
+$size-x-low: 0.9rem;
+$size-x-x-low: 0.8rem;
 
 // header
 header {
@@ -18,6 +28,14 @@ header {
 .restaurant-bg {
     width: 90%;
     margin: 0 auto;
+    height: 325px;
+    position: relative;
+    overflow: hidden;
+    img {
+        position: relative;
+        z-index: -1;
+        top: -80px;
+    }
 }
 
 // main
@@ -26,11 +44,42 @@ header {
     margin: 0 auto;
     box-shadow: 0 1px 8px 3px rgb(185, 184, 184);
     padding: 40px 60px;
-    top: 0;
 }
 
 .card-meal {
     padding: 5px 0;
+}
+
+// font-size
+.main-title {
+    h1, i {
+        font-size: $size-x-high;
+    }
+}
+
+.main-menu h2 {
+        font-size: $size-high;
+}
+
+.card-meal {
+    &__description {
+        padding: 20px;
+        h3 {
+            font-size: $size-medium;
+        }
+        p {
+            font-size: $size-low;
+        }
+    }
+    &__price {
+        font-size: $size-low;
+    }
+}
+
+.main-order {
+    a {
+        font-size: $size-medium;
+    }
 }
 
 // footer

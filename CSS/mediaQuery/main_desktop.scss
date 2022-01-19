@@ -1,7 +1,6 @@
 // version desktop
 
 // variables
-// variables
 $primary: #9356DC;
 $size-x-high: 2.5rem;
 $size-very-high: 1.7rem;
@@ -87,6 +86,7 @@ nav {
         font-size: $size-medium;
     }
 }
+
 // hover
 .nav-explore a:hover {
     &::after {
