@@ -76,7 +76,7 @@ nav p, nav a {
   font-size: 1.3rem;
 }
 
-nav a:hover::after {
+.nav-explore a:hover::after {
   opacity: .2;
 }
 

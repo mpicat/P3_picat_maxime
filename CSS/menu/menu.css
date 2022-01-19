@@ -442,8 +442,8 @@ header {
   bottom: 0;
   left: 0;
   background-color: white;
-  -webkit-box-shadow: 0 1px 8px 3px #5a5a5a;
-          box-shadow: 0 1px 8px 3px #5a5a5a;
+  -webkit-box-shadow: 0 2px 8px 8px black;
+          box-shadow: 0 2px 8px 8px black;
   opacity: 0;
   z-index: -1;
   -webkit-transition: opacity 250ms;

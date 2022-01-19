@@ -82,6 +82,11 @@ nav {
         color: rgba(110,110,110,255);
         font-size: $size-very-low;
     }
+}
+
+.nav-explore {
+    display: flex;
+    justify-content: center;
     a {
         text-decoration: none;
         color: white;
@@ -93,7 +98,7 @@ nav {
         z-index: 1;
         &:active {
             &::after {
-                opacity: .2;
+                opacity: 0.2;
             }
         }
         &::after {
@@ -105,7 +110,7 @@ nav {
             bottom: 0;
             left: 0;
             background-color: white;
-            box-shadow: 0 1px 8px 3px rgb(90, 90, 90);
+            box-shadow: 0 2px 8px 8px rgb(0, 0, 0);
             opacity: 0;
             z-index: -1;
             transition: opacity 250ms;
