@@ -22,8 +22,8 @@
 
 @-webkit-keyframes entrance-move {
   0% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   33% {
@@ -40,8 +40,8 @@
 
 @keyframes entrance-move {
   0% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   33% {
@@ -58,13 +58,13 @@
 
 @-webkit-keyframes dish-move {
   0% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   33% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   66% {
@@ -81,13 +81,13 @@
 
 @keyframes dish-move {
   0% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   33% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   66% {
@@ -104,13 +104,13 @@
 
 @-webkit-keyframes dessert-move {
   0% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   66% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   100% {
@@ -122,13 +122,13 @@
 
 @keyframes dessert-move {
   0% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   66% {
-    -webkit-transform: translateY(12px);
-            transform: translateY(12px);
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
     opacity: 0;
   }
   100% {
@@ -156,9 +156,8 @@ header {
 .header-logo {
   position: relative;
   z-index: -1;
-  -webkit-box-shadow: none;
-          box-shadow: none;
   padding-top: 25px;
+  background-color: white;
 }
 
 .header-logo img {
@@ -200,20 +199,20 @@ header {
   top: -40px;
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
-  padding: 35px 15px 0px 15px;
+  padding: 35px 20px 0px;
 }
 
 .main-menu h2 {
   text-transform: uppercase;
   position: relative;
   font-weight: 400;
-  padding: 0 0 10px 10px;
+  padding: 0 0 10px;
 }
 
 .main-menu h2::after {
   content: "";
   position: absolute;
-  left: 10px;
+  left: 0;
   bottom: 0;
   height: 2px;
   width: 40px;
@@ -237,12 +236,11 @@ header {
   font-family: "Shrikhand", cursive;
   font-size: 1.7rem;
   font-weight: 500;
-  padding-left: 10px;
 }
 
 .main-title i {
   font-size: 1.6rem;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .main-title__heart {
@@ -327,14 +325,14 @@ header {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 15px 0 1px 15px;
+  padding: 27px 0 0 15px;
   font-weight: 500;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
 .card-meal__bar {
@@ -355,10 +353,10 @@ header {
   background-color: #99E2D0;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+  -webkit-transition: -webkit-transform 400ms ease-in-out;
+  transition: -webkit-transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out;
+  transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
 }
 
 .card-meal__bar__check {
@@ -421,8 +419,7 @@ header {
   color: white;
   padding: 15px 55px;
   border-radius: 30px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-image: linear-gradient(-5deg, #9356DC, 70%, #FF79DA);
   -webkit-box-shadow: 0 1px 8px 3px #b9b8b8;
           box-shadow: 0 1px 8px 3px #b9b8b8;
   position: relative;

@@ -1,5 +1,3 @@
-// version desktop
-
 // variables
 $primary: #9356DC;
 $size-x-high: 2.5rem;
@@ -19,8 +17,7 @@ header {
 
 // functioning
 .section-functioning {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px 0;
     h2 {
         text-align: center;
     }

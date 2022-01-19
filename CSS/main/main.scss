@@ -19,6 +19,11 @@ $size-very-low: 1.1rem;
 $size-x-low: 0.9rem;
 $size-x-x-low: 0.8rem;
 
+@mixin font-style-form {
+    font-weight: 500;
+    font-size: $size-very-low;
+    color: rgba(50,50,50,255);
+}
 
 // header
 header {
@@ -41,14 +46,6 @@ form {
     display: flex;
     justify-content: center;
     background-color: rgba(234,234,234,255);
-    h3 {
-        display: flex;
-        justify-content: center;
-        align-items: baseline;
-        font-weight: 500;
-        font-size: $size-very-low;
-        color: rgba(50,50,50,255);
-    }
     i {
         padding-right: 20px;
     }
@@ -57,20 +54,26 @@ form {
         border: none;
         background: none;
         outline: none;
-        font-weight: 500;
-        font-size: $size-very-low;
-        color: rgba(50,50,50,255);
+        @include font-style-form;
     }
+}
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 17px 0;
+    @include font-style-form;
 }
 
 // nav
 nav {
     display: flex;
     flex-direction: column;
-    row-gap: 60px;
+    row-gap: 40px;
     background-color: $bg-color;
     text-align: center;
-    padding: 35px 35px 85px 35px;
+    padding: 35px 35px 55px;
     font-size: $size-very-low;
     h2 {
         margin: 0;
@@ -120,7 +123,7 @@ nav {
 
 // functioning
 .section-functioning {
-    padding: 25px 20px 45px 20px;
+    padding: 25px 25px 65px;
     h2 {
         font-size: $size-very-high;
     }
@@ -129,8 +132,9 @@ nav {
 .functioning-wrap {
     display: flex;
     flex-direction: column;
+    row-gap: 25px;
+    padding-left: 10px;
     &__line {
-        margin: 0 0 25px 15px;
         position: relative;
         z-index: 1;
         display: flex;
@@ -194,7 +198,7 @@ nav {
     display: flex;
     flex-direction: column;
     row-gap: 25px;
-    padding: 55px 20px 75px 20px;
+    padding: 55px 20px 65px;
     background-color: $bg-color;
     h2 {
         margin: 0;
@@ -213,7 +217,6 @@ nav {
 
 .card-wrapper {
     position: relative;
-    width: 100%;
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -282,7 +285,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     row-gap: 25px;
-    padding: 35px 25px 25px 25px;
+    padding: 35px 25px 25px;
     background: rgba(53,53,53,255);
     color: white;
 }

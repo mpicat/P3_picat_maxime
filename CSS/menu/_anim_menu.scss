@@ -11,7 +11,7 @@
 // Animation Entrées, Plats, Desserts
 @keyframes entrance-move {
     0% {
-        transform: translateY(12px);
+        transform: translateY(15px);
         opacity: 0;
     }
     33% {
@@ -26,11 +26,11 @@
 
 @keyframes dish-move {
     0% {
-        transform: translateY(12px);
+        transform: translateY(15px);
         opacity: 0;
     }
     33% {
-        transform: translateY(12px);
+        transform: translateY(15px);
         opacity: 0;
     }
     66% {
@@ -45,11 +45,11 @@
 
 @keyframes dessert-move {
     0% {
-        transform: translateY(12px);
+        transform: translateY(15px);
         opacity: 0;
     }
     66% {
-        transform: translateY(12px);
+        transform: translateY(15px);
         opacity: 0;
     }
     100% {
