@@ -576,4 +576,8 @@ footer {
     opacity: 0;
   }
 }
+
+body {
+  background-image: url(/img/delice.webp);
+}
 /*# sourceMappingURL=main.css.map */
